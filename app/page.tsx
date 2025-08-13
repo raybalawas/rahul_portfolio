@@ -83,60 +83,79 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Weather App",
+      title: "KingJoinery – Interior Design Site",
       description:
-        "A real-time weather application that provides current weather updates based on user location using the OpenWeather API.",
-      link: "https://github.com/pranayKoolwal/Weather-app",
-      tech: ["React", "API Integration", "Geolocation"],
-      image: "/weather.webp?height=200&width=300",
+        "A custom-built website for an Australian interior design company to showcase services and past projects. The platform includes a dynamic portfolio, contact integration, and SEO optimization.",
+      link: "https://kingjoinery.com.au/",
+      tech: ["Laravel", "Blade", "MySQL", "Bootstrap"],
+      image: "/kingjoinery.png",
       category: "web",
     },
     {
-      title: "Dynamic Quiz App",
+      title: "SuperKings Cricket Academy",
       description:
-        "A quiz application that dynamically loads questions from a JSON file or API with scoring, timer, and category-based filtering.",
-      link: "https://github.com/pranayKoolwal/quiz-app",
-      tech: ["React", "JavaScript", "CSS"],
-      image: "/quiz-set-in-doodle-style-illustration-icon-question-symbol-for-print-and-design-quiz-and-exam-concept-isolated-element-on-black-background-collection-of-sign-for-school-and-event-vector.jpg?height=200&width=300",
-      category: "web",
-    },
-    {
-      title: "E-commerce App",
-      description:
-        "A complete e-commerce platform featuring user authentication, product listings, cart system, order management, and Stripe payment integration.",
-      link: "https://github.com/pranayKoolwal/ecommerce-app",
-      tech: ["React", "Node.js", "MongoDB", "Express.js", "Stripe"],
-      image: "/ecommerce.jpg?height=200&width=300",
+        "A role-based web application with 4 user panels (SuperAdmin, Admin, Coach, Student). Features include class scheduling, attendance, progress tracking, and secure login with role-based permissions.",
+      link: "https://www.superkingsacademy.com/myprofile",
+      tech: ["Laravel", "AJAX", "jQuery", "MySQL", "Firebase", "Razorpay"],
+      image: "/cricket.png",
       category: "fullstack",
     },
     {
-      title: "Live Chat App",
+      title: "Navy Ship Machinery Management",
       description:
-        "A real-time chat application with user login, multiple chat rooms, message persistence, and WebSocket communication.",
-      link: "https://github.com/pranayKoolwal/live-chat-app",
-      tech: ["React", "Socket.io", "Node.js", "Express", "MongoDB"],
-      image: "/chat.avif?height=200&width=300",
+        "A hybrid system built with PHP Desktop and Laravel for managing machinery onboard Navy ships. It allows real-time status tracking, maintenance logging, service history reports, and role-based access — even in offline environments. The Laravel backend ensures data centralization, while the PHP desktop app provides local operability.",
+      link: "#", // Replace with actual GitHub URL if needed
+      tech: ["Laravel", "PHP Desktop", "MySQL", "AJAX", "Blade", "Bootstrap"],
+      image: "/navy.jpg",
+      category: "enterprise",
+    },
+    {
+      title: "JoyTap Gaming Admin + API",
+      description:
+        "Created admin panel and RESTful API backend for a gaming app. Supports user management, game logic, leaderboard management, wallet features, and integrated payment gateway.",
+      link: "#", // Add GitHub or live preview if available
+      tech: ["Laravel", "REST API", "JWT", "Razorpay", "MySQL"],
+      image: "/joytap.png",
+      category: "backend",
+    },
+    {
+      title: "Addex Advertiser Platform",
+      description:
+        "A 3-panel advertising platform with modules for advertisers, admins, and API consumers (mobile apps). Features include ad campaign creation, budget tracking, analytics, and secure APIs.",
+      link: "https://backend.addex.co.za/",
+      tech: ["Laravel", "JWT", "REST API", "MySQL", "Cloudinary"],
+      image: "/addex.png",
       category: "fullstack",
     },
     {
-      title: "Food Delivery App",
+      title: "PixelGenix – IT Company Portfolio",
       description:
-        "Currently under development — A full-stack food delivery app with restaurant browsing, cart system, order tracking, and delivery dashboard.",
-      link: "#",
-      tech: ["React", "Node.js", "MongoDB", "Express.js"],
-      image: "/food.jpg?height=200&width=300",
+        "A Node.js and Express.js-based dynamic portfolio site for an IT company showcasing their services, tech stack, and completed projects. Includes admin panel and dynamic CMS.",
+      link: "https://pixelgenixitsolution.com/",
+      tech: ["Node.js", "Express.js", "MongoDB", "EJS", "Cloudinary"],
+      image: "/pixelgenix.png",
       category: "fullstack",
     },
     {
-      title: "LLM Playground",
+      title: "EduTech Platform",
       description:
-        "An experimental interface to interact with Large Language Models (LLMs) like GPT, featuring prompt experimentation and conversation saving.",
-      link: "https://github.com/pranayKoolwal/llm-playground",
-      tech: ["React", "OpenAI API", "Tailwind", "Framer Motion"],
-      image: "/ai.jpg?height=200&width=300",
-      category: "ai",
+        "A full-featured educational web platform built with React and Node. Features include course listing, user enrollment, payment integration, and student dashboards.",
+      link: "#", // Add live or GitHub link if available
+      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+      image: "/edutech.jpg",
+      category: "fullstack",
+    },
+    {
+      title: "CRM System – Laravel",
+      description:
+        "A Laravel-based Customer Relationship Management (CRM) system with task tracking, user roles, project status monitoring, and email notifications.",
+      link: "#", // Add GitHub or live URL if available
+      tech: ["Laravel", "MySQL", "AJAX", "jQuery", "Blade"],
+      image: "/crm.png",
+      category: "enterprise",
     },
   ];
+
 
   const services = [
     {
@@ -147,7 +166,7 @@ export default function Portfolio() {
     },
     {
       title: "Backend Development",
-      description: "Building robust server-side applications with Node.js and Express.js",
+      description: "Building robust server-side applications with Node.js & PHP(Laravel)",
       icon: <Briefcase className="w-8 h-8 md:w-12 md:h-12" />,
       delay: 0.2,
     },
@@ -166,102 +185,102 @@ export default function Portfolio() {
   ]
 
   const learningPath = [
-  {
-    title: "HTML/CSS",
-    description: "Building blocks of web development",
-    side: "left",
-    delay: 0,
-  },
-  {
-    title: "JavaScript",
-    description: "Dynamic web functionality",
-    side: "right",
-    delay: 0.2,
-  },
-  {
-    title: "Jquery-AJAX",
-    description: "Simplifying frontend interactions with the server",
-    side: "left",
-    delay: 0.4,
-  },
-  {
-    title: "Bootstrap",
-    description: "Crafting responsive and stylish UIs",
-    side: "right",
-    delay: 0.6,
-  },
-  {
-    title: "PHP",
-    description: "Backend scripting for server-side logic",
-    side: "left",
-    delay: 0.8,
-  },
-  {
-    title: "Node.js",
-    description: "JavaScript runtime for scalable backend services",
-    side: "right",
-    delay: 1.0,
-  },
-  {
-    title: "Express.js",
-    description: "Minimal and flexible Node.js web framework",
-    side: "left",
-    delay: 1.2,
-  },
-  {
-    title: "MongoDB",
-    description: "Document-based NoSQL database for modern apps",
-    side: "right",
-    delay: 1.4,
-  },
-  {
-    title: "MySQL",
-    description: "Relational database management with SQL mastery",
-    side: "left",
-    delay: 1.6,
-  },
-  {
-    title: "C Programming",
-    description: "The foundation of system-level programming and logic building",
-    side: "right",
-    delay: 1.8,
-  },
-  {
-    title: "DSA",
-    description: "Data structures and algorithms for problem-solving excellence",
-    side: "left",
-    delay: 2.0,
-  }
-];
+    {
+      title: "HTML/CSS",
+      description: "Building blocks of web development",
+      side: "left",
+      delay: 0,
+    },
+    {
+      title: "JavaScript",
+      description: "Dynamic web functionality",
+      side: "right",
+      delay: 0.2,
+    },
+    {
+      title: "Jquery-AJAX",
+      description: "Simplifying frontend interactions with the server",
+      side: "left",
+      delay: 0.4,
+    },
+    {
+      title: "Bootstrap",
+      description: "Crafting responsive and stylish UIs",
+      side: "right",
+      delay: 0.6,
+    },
+    {
+      title: "PHP",
+      description: "Backend scripting for server-side logic",
+      side: "left",
+      delay: 0.8,
+    },
+    {
+      title: "Node.js",
+      description: "JavaScript runtime for scalable backend services",
+      side: "right",
+      delay: 1.0,
+    },
+    {
+      title: "Express.js",
+      description: "Minimal and flexible Node.js web framework",
+      side: "left",
+      delay: 1.2,
+    },
+    {
+      title: "MongoDB",
+      description: "Document-based NoSQL database for modern apps",
+      side: "right",
+      delay: 1.4,
+    },
+    {
+      title: "MySQL",
+      description: "Relational database management with SQL mastery",
+      side: "left",
+      delay: 1.6,
+    },
+    {
+      title: "C Programming",
+      description: "The foundation of system-level programming and logic building",
+      side: "right",
+      delay: 1.8,
+    },
+    {
+      title: "DSA",
+      description: "Data structures and algorithms for problem-solving excellence",
+      side: "left",
+      delay: 2.0,
+    }
+  ];
 
 
   const testimonials = [
     {
-      name: "Current Education",
-      role: "Bachelor of Computer Applications (BCA)",
-      company: "SS Jain Subodh College, Jaipur",
+      name: "B.sc IT",
+      role: "Bachelor of Science - IT",
+      company: "Rajasthan University, Jaipur",
       content:
-        "I am currently pursuing my Bachelor of Computer Applications (BCA) at SS Jain Subodh College, Jaipur. I am in my first year and have been actively involved in various projects and activities that enhance my learning experience.",
+        "I completed my B.sc - IT Rajasthan University with a score of 67.2% in 2021. During my College, I developed a strong foundation in computer science and mathematics.",
       rating: 5,
-      year: "2024-Present",
+      year: "2021",
     },
     {
       name: "12th Grade Achievement",
       role: "Higher Secondary Education",
-      company: "Saint Soldier Public School",
+      company: "Marudhar sr. sec. School Bansur(Alwar)",
       content:
-        "I completed my 12th grade from Saint Soldier Public School with a score of 77.2% in 2024. During my school years, I developed a strong foundation in computer science and mathematics.",
+        "I completed my 12th grade from Marudhar Sr. sec. School with a score of 70.0% in 2018. During my school years, I developed a strong foundation in mathematics.",
       rating: 5,
-      year: "2024",
+      year: "2018",
     },
     {
       name: "10th Grade Foundation",
       role: "Secondary Education",
-      company: "Saint Soldier Public School",
+      company: "Gandhi Sr. Sec. School, Bansur(Alwar)",
       content:
-        "I also completed my 10th grade from Saint Soldier Public School with a score of 70% in 2022. My interest in technology and programming started during my high school years, and I have been passionate about it ever since.",
+        "I also completed my 10th grade from Gandhi Sr. Sec. School with a score of 63% in 2015. My interest in technology and programming started during my high school years, and I have been passionate about it ever since.",
       rating: 5,
-      year: "2022",
+      year: "2015",
     },
   ]
 
@@ -377,7 +396,7 @@ export default function Portfolio() {
                           Rahul Yadav
                         </motion.h3>
                       </div>
-                      <p className="text-xs text-gray-400">Full Stack Developer</p>
+                      <p className="text-xs text-gray-400">Backend Developer</p>
                     </div>
                   </motion.div>
                   <motion.button
@@ -490,7 +509,7 @@ export default function Portfolio() {
                       className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 body-md font-semibold"
                     >
                       <Download className="w-4 h-4" />
-                      <span>Download CV</span>
+                      <span>Download CV1</span>
                     </motion.button>
                   </motion.div>
                 </div>
@@ -578,7 +597,7 @@ export default function Portfolio() {
                 transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
                 className="text-secondary mb-10 leading-relaxed font-medium text-base sm:text-[17px]"
               >
-                Full Stack Developer
+                Backend Developer
               </motion.p>
 
               <motion.div
@@ -622,7 +641,7 @@ export default function Portfolio() {
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-blue-500 to-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
                 >
-                  <span className="relative z-10">Get In Touchx</span>
+                  <span className="relative z-10">Get In Touch</span>
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     initial={false}
@@ -634,7 +653,7 @@ export default function Portfolio() {
                   className="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Download CV
+                  Download CV2
                 </motion.button>
               </motion.div>
             </div>
@@ -697,7 +716,7 @@ export default function Portfolio() {
                   alt="Rahul Yadav"
                   width={400}
                   height={500}
-                  className="rounded-2xl object-cover w-full h-[420px] transition-transform duration-500 group-hover:scale-105"
+                  className="rounded-2xl object-cover w-full h-[600px] transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent rounded-2xl" />
                 <motion.div
@@ -707,7 +726,7 @@ export default function Portfolio() {
                 >
                   <div className="text-center">
                     <User className="w-12 h-12 text-blue-400 mx-auto mb-3" />
-                    <p className="text-white font-semibold">Full Stack Developer</p>
+                    <p className="text-white font-semibold">Backend Developer</p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -722,7 +741,7 @@ export default function Portfolio() {
               className="order-1 lg:order-2 space-y-5"
             >
               {[
-                "I'm a passionate Full Stack Developer with expertise in NODE JS & PHP(Laravel) and modern web technologies. I love building user-friendly applications and solving complex problems through clean, efficient code.",
+                "I'm a passionate Backend Developer with expertise in NODE JS & PHP(Laravel) and modern web technologies. I love building user-friendly applications and solving complex problems through clean, efficient code.",
                 "My journey in web development has led me to work on various exciting projects, from responsive web applications to complex full-stack solutions.",
                 "I have a strong foundation in HTML, CSS, and JavaScript, and I am proficient in using frameworks and libraries such as Laravel, Node.js, and Express.js. I am also experienced in working with databases like MongoDB & MySQL.",
                 "In addition to my technical skills, I am a strong communicator and team player. I enjoy collaborating with others to bring ideas to life and create impactful solutions.",
@@ -748,7 +767,7 @@ export default function Portfolio() {
                 viewport={{ once: true }}
                 className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-6"
               >
-                {["React.js", "Node.js", "MongoDB", "Express.js"].map((skill) => (
+                {["PHP", "Laravel", "Node.js", "Express.js", "MySql", "MongoDB", "Java Script", "C-Language", "DSA", "HTML", "CSS", "Jquery", "Ajax", "&More"].map((skill) => (
                   <motion.div
                     key={skill}
                     whileHover={{ scale: 1.05, y: -2 }}
@@ -1105,8 +1124,8 @@ export default function Portfolio() {
                   <Briefcase className="w-8 h-8 sm:w-12 sm:h-12" />
                 </motion.div>
                 <div>
-                  <h3 className="heading-sm font-semibold text-primary mb-4">Internship Experience</h3>
-                  <p className="text-blue-400 text-base sm:text-lg">3 Months • full stack Developer</p>
+                  <h3 className="heading-sm font-semibold text-primary mb-4">Experience</h3>
+                  <p className="text-blue-400 text-base sm:text-lg"> Backend Developer</p>
                 </div>
               </div>
               <div className="space-y-4 mb-6 sm:mb-8">
@@ -1195,7 +1214,7 @@ export default function Portfolio() {
             className="flex justify-center mb-8 sm:mb-12"
           >
             <div className="flex flex-wrap justify-center gap-2 sm:gap-4 bg-gray-800 p-2 rounded-full">
-              {["all", "web", "fullstack"].map((filter) => (
+              {[/*"all", "web", "fullstack"*/].map((filter) => (
                 <motion.button
                   key={filter}
                   onClick={() => setPortfolioFilter(filter)}
@@ -1204,7 +1223,7 @@ export default function Portfolio() {
                   className={`px-4 sm:px-6 py-2 rounded-full transition-all duration-300 text-sm sm:text-base ${portfolioFilter === filter ? "bg-blue-500 text-white" : "text-gray-400 hover:text-white"
                     } body-md font-semibold`}
                 >
-                  {filter.charAt(0).toUpperCase() + filter.slice(1)}
+                  {/*filter.charAt(0).toUpperCase() + filter.slice(1)*/}
                 </motion.button>
               ))}
             </div>
@@ -1788,7 +1807,7 @@ export default function Portfolio() {
                 className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 body-md font-semibold"
               >
                 <Download className="w-4 h-4" />
-                <span>Download CV</span>
+                <span>Download CV3</span>
               </motion.button>
               <motion.button
                 onClick={scrollToTop}
