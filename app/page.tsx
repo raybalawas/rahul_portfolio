@@ -503,14 +503,16 @@ export default function Portfolio() {
                     </div>
 
                     {/* CTA Button */}
-                    <motion.button
+                    <motion.a
+                      href="/Backend_Resume.pdf"
+                      download="Rahul_Yadav_Resume.pdf"
                       whileHover={{ scale: 1.05, y: -2 }}
                       whileTap={{ scale: 0.95 }}
                       className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 body-md font-semibold"
                     >
                       <Download className="w-4 h-4" />
                       <span>Download CV1</span>
-                    </motion.button>
+                    </motion.a>
                   </motion.div>
                 </div>
               </div>
@@ -647,14 +649,16 @@ export default function Portfolio() {
                     initial={false}
                   />
                 </motion.button>
-                <motion.button
+                <motion.a
+                  href="/Backend_Resume.pdf"
+                  download="Rahul_Yadav_Resume.pdf"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                   Download CV2
-                </motion.button>
+                </motion.a>
               </motion.div>
             </div>
 
@@ -958,13 +962,20 @@ export default function Portfolio() {
                 {[
                   { name: "HTML", level: 95, icon: "🌐" },
                   { name: "CSS", level: 90, icon: "🎨" },
-                  { name: "JavaScript", level: 93, icon: "⚡" },
                   { name: "Bootstrap", level: 85, icon: "📱" },
-                  { name: "React.js", level: 92, icon: "⚛️" },
+                  { name: "PHP", level: 80, icon: "🐘" },
+                  { name: "Laravel", level: 85, icon: "🛠️" },
+                  { name: "MySQL", level: 90, icon: "📊" },
+                  { name: "JavaScript", level: 93, icon: "⚡" },
+                  { name: "Jquery", level: 85, icon: "📜" },
+                  { name: "Ajax", level: 80, icon: "🔄" },
+                  // { name: "React.js", level: 92, icon: "⚛️" },
                   { name: "Node.js", level: 91, icon: "🟢" },
                   { name: "Express.js", level: 90, icon: "🚀" },
                   { name: "MongoDB", level: 85, icon: "🍃" },
-                  { name: "Chakra-UI", level: 80, icon: "💎" },
+                  // { name: "Chakra-UI", level: 80, icon: "💎" },
+                  { name: "C-Language", level: 80, icon: "🖥️" },
+                  { name: "DSA", level: 75, icon: "📚" },
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
@@ -1049,13 +1060,13 @@ export default function Portfolio() {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <h3 className="heading-sm font-semibold text-primary mb-6">Others</h3>
+              {/* <h3 className="heading-sm font-semibold text-primary mb-6">Others</h3> */}
               <div className="space-y-4 sm:space-y-6">
                 {[
-                  { name: "Python", level: 82, icon: "🐍" },
-                  { name: "MySQL", level: 78, icon: "🗄️" },
-                  { name: "pandas", level: 75, icon: "🐼" },
-                  { name: "matplotlib", level: 73, icon: "📊" },
+                  // { name: "Python", level: 82, icon: "🐍" },
+                  // { name: "MySQL", level: 78, icon: "🗄️" },
+                  // { name: "pandas", level: 75, icon: "🐼" },
+                  // { name: "matplotlib", level: 73, icon: "📊" },
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
@@ -1130,21 +1141,21 @@ export default function Portfolio() {
               </div>
               <div className="space-y-4 mb-6 sm:mb-8">
                 <p className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
-                  I worked as an intern for 3 months to build an e-commerce application using React.js.
+                  I worked as an Backend Developer in Programmates software pvt. ltd for 1.6 Years to build many application using Laravel, PHP.
                 </p>
                 <p className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
-                  During this internship, I gained valuable experience in developing user-friendly interfaces, managing
-                  state with Redux, and integrating APIs to fetch and handle accourding to the  need of The Users.
+                  During this Job, I gained valuable experience in developing user-friendly webApps, managing
+                  Admin Panel, and integrating APIs to fetch and handle accourding to the  need of The Users.
                 </p>
               </div>
-              <motion.a
+              {/* <motion.a
                 href={"https://kurtaghar.store"}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:shadow-xl transition-all duration-300 body-md font-semibold"
               >
                 Visit Website <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 ml-3" />
-              </motion.a>
+              </motion.a> */}
             </motion.div>
           </motion.div>
           <motion.div
@@ -1173,7 +1184,7 @@ export default function Portfolio() {
               </div>
               <div className="space-y-4 mb-6 sm:mb-8">
                 <p className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
-                  currently I am working in NBT as a Backend Developer in Node js
+                  currently I am working in NBT as a Backend Developer in Node js/ PHP(Laravel).
                 </p>
                 <p className="text-secondary leading-relaxed" style={{ fontSize: '16px', lineHeight: '1.7' }}>
                   My role involves developing scalable APIs, managing databases, and ensuring smooth backend operations for various web applications. Alongside my job, I am consistently upskilling by learning advanced backend concepts, system architecture, and contributing to full-stack projects to enhance my expertise.
@@ -1801,14 +1812,16 @@ export default function Portfolio() {
               </p>
             </div>
             <div className="flex items-center space-x-4">
-              <motion.button
+              <motion.a
+                href="/Backend_Resume.pdf"
+                download="Rahul_Yadav_Resume.pdf"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 body-md font-semibold"
               >
                 <Download className="w-4 h-4" />
                 <span>Download CV3</span>
-              </motion.button>
+              </motion.a>
               <motion.button
                 onClick={scrollToTop}
                 whileHover={{ scale: 1.1, rotate: -90 }}

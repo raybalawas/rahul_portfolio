@@ -27,11 +27,12 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Rahul Yadav - Full Stack Developer",
   description:
-    "Portfolio of Rahul Yadav, a passionate Full Stack Developer specializing in React.js and modern web technologies. Based in Jaipur, India.",
+    "Portfolio of Rahul Yadav, a passionate Full Stack Developer specializing in Backend modern web technologies. Based in Jaipur, India.",
   keywords: [
     "Rahul Yadav",
     "Full Stack Developer",
-    "React Developer",
+    "PHP Developer",
+    "Laravel Developer",
     "Web Developer",
     "JavaScript",
     "Node.js",
@@ -45,18 +46,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://pranaykoolwal.dev",
+    url: "https://rahulyadav.dev",
     title: "Rahul Yadav - Full Stack Developer",
     description:
-      "Portfolio of Rahul Yadav, a passionate Full Stack Developer specializing in React.js and modern web technologies.",
+      "Portfolio of Rahul Yadav, a passionate Full Stack Developer specializing in Backend modern web technologies.",
     siteName: "Rahul Yadav Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Rahul Yadav - Full Stack Developer",
     description:
-      "Portfolio of Rahul Yadav, a passionate Full Stack Developer specializing in React.js and modern web technologies.",
-    creator: "@pranaykoolwal",
+      "Portfolio of Rahul Yadav, a passionate Full Stack Developer specializing in Backend modern web technologies.",
+    creator: "@rahulyadav",
   },
   robots: {
     index: true,
