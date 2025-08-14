@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // tells Next.js to statically export your site
-};
+  output: 'export',
+  // Add your other configs if needed
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
