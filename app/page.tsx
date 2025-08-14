@@ -938,169 +938,163 @@ export default function Portfolio() {
 
       {/* Skills Section */}
       <section className="py-16 sm:py-20 bg-gray-800/50">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="heading-lg font-bold mb-16 text-center text-primary font-poppins"
-          >
-            Skills
-          </motion.h2>
+  <div className="container mx-auto px-4 sm:px-6">
+    <motion.h2
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="heading-lg font-bold mb-16 text-center text-primary font-poppins"
+    >
+      Skills
+    </motion.h2>
 
-          <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
-            {/* MERN Stack */}
+    <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
+
+      {/* MERN Stack */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="heading-sm font-semibold text-primary mb-6">MERN Stack</h3>
+        <div className="space-y-4 sm:space-y-6">
+          {([
+            { name: "HTML", level: 95, icon: "🌐" },
+            { name: "CSS", level: 90, icon: "🎨" },
+            { name: "Bootstrap", level: 85, icon: "📱" },
+            { name: "PHP", level: 80, icon: "🐘" },
+            { name: "Laravel", level: 85, icon: "🛠️" },
+            { name: "MySQL", level: 90, icon: "📊" },
+            { name: "JavaScript", level: 93, icon: "⚡" },
+            { name: "Jquery", level: 85, icon: "📜" },
+            { name: "Ajax", level: 80, icon: "🔄" },
+            { name: "Node.js", level: 91, icon: "🟢" },
+            { name: "Express.js", level: 90, icon: "🚀" },
+            { name: "MongoDB", level: 85, icon: "🍃" },
+            { name: "C-Language", level: 80, icon: "🖥️" },
+            { name: "DSA", level: 75, icon: "📚" },
+          ] as { name: string; level: number; icon: string }[]).map((skill, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              key={skill.name}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="flex items-center space-x-3 sm:space-x-4"
             >
-              <h3 className="heading-sm font-semibold text-primary mb-6">MERN Stack</h3>
-              <div className="space-y-4 sm:space-y-6">
-                {[
-                  { name: "HTML", level: 95, icon: "🌐" },
-                  { name: "CSS", level: 90, icon: "🎨" },
-                  { name: "Bootstrap", level: 85, icon: "📱" },
-                  { name: "PHP", level: 80, icon: "🐘" },
-                  { name: "Laravel", level: 85, icon: "🛠️" },
-                  { name: "MySQL", level: 90, icon: "📊" },
-                  { name: "JavaScript", level: 93, icon: "⚡" },
-                  { name: "Jquery", level: 85, icon: "📜" },
-                  { name: "Ajax", level: 80, icon: "🔄" },
-                  // { name: "React.js", level: 92, icon: "⚛️" },
-                  { name: "Node.js", level: 91, icon: "🟢" },
-                  { name: "Express.js", level: 90, icon: "🚀" },
-                  { name: "MongoDB", level: 85, icon: "🍃" },
-                  // { name: "Chakra-UI", level: 80, icon: "💎" },
-                  { name: "C-Language", level: 80, icon: "🖥️" },
-                  { name: "DSA", level: 75, icon: "📚" },
-                ].map((skill, index) => (
+              <span className="text-lg sm:text-2xl">{skill.icon}</span>
+              <div className="flex-1">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="body-md font-medium text-primary">{skill.name}</span>
+                  <span className="caption text-accent font-semibold">{skill.level}%</span>
+                </div>
+                <div className="w-full bg-gray-700 rounded-full h-2">
                   <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
                     viewport={{ once: true }}
-                    className="flex items-center space-x-3 sm:space-x-4"
+                    className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
                   >
-                    <span className="text-lg sm:text-2xl">{skill.icon}</span>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="body-md font-medium text-primary">{skill.name}</span>
-                        <span className="caption text-accent font-semibold">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
-                          viewport={{ once: true }}
-                          className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
-                        >
-                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
-                        </motion.div>
-                      </div>
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
                   </motion.div>
-                ))}
+                </div>
               </div>
             </motion.div>
-
-            {/* MS-Office */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="heading-sm font-semibold text-primary mb-6">MS-Office</h3>
-              <div className="space-y-4 sm:space-y-6">
-                {[
-                  { name: "MS-Word", level: 90, icon: "📄" },
-                  { name: "MS-Excel", level: 85, icon: "📊" },
-                  { name: "MS-PowerPoint", level: 88, icon: "📈" },
-                ].map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-center space-x-3 sm:space-x-4"
-                  >
-                    <span className="text-lg sm:text-2xl">{skill.icon}</span>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="body-md font-medium text-primary">{skill.name}</span>
-                        <span className="caption text-accent font-semibold">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
-                          viewport={{ once: true }}
-                          className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
-                        >
-                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
-                        </motion.div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Others */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              {/* <h3 className="heading-sm font-semibold text-primary mb-6">Others</h3> */}
-              <div className="space-y-4 sm:space-y-6">
-                {[
-                  // { name: "Python", level: 82, icon: "🐍" },
-                  // { name: "MySQL", level: 78, icon: "🗄️" },
-                  // { name: "pandas", level: 75, icon: "🐼" },
-                  // { name: "matplotlib", level: 73, icon: "📊" },
-                ].map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-center space-x-3 sm:space-x-4"
-                  >
-                    <span className="text-lg sm:text-2xl">{skill.icon}</span>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="body-md font-medium text-primary">{skill.name}</span>
-                        <span className="caption text-accent font-semibold">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
-                          viewport={{ once: true }}
-                          className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
-                        >
-                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
-                        </motion.div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+          ))}
         </div>
-      </section>
+      </motion.div>
+
+      {/* MS-Office */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="heading-sm font-semibold text-primary mb-6">MS-Office</h3>
+        <div className="space-y-4 sm:space-y-6">
+          {([
+            { name: "MS-Word", level: 90, icon: "📄" },
+            { name: "MS-Excel", level: 85, icon: "📊" },
+            { name: "MS-PowerPoint", level: 88, icon: "📈" },
+          ] as { name: string; level: number; icon: string }[]).map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="flex items-center space-x-3 sm:space-x-4"
+            >
+              <span className="text-lg sm:text-2xl">{skill.icon}</span>
+              <div className="flex-1">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="body-md font-medium text-primary">{skill.name}</span>
+                  <span className="caption text-accent font-semibold">{skill.level}%</span>
+                </div>
+                <div className="w-full bg-gray-700 rounded-full h-2">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Others */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
+        <div className="space-y-4 sm:space-y-6">
+          {([] as { name: string; level: number; icon: string }[]).map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="flex items-center space-x-3 sm:space-x-4"
+            >
+              <span className="text-lg sm:text-2xl">{skill.icon}</span>
+              <div className="flex-1">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="body-md font-medium text-primary">{skill.name}</span>
+                  <span className="caption text-accent font-semibold">{skill.level}%</span>
+                </div>
+                <div className="w-full bg-gray-700 rounded-full h-2">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
 
       {/* Portfolio/Experience Section */}
       <section id="portfolio" className="py-16 sm:py-20">
