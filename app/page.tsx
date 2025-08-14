@@ -1,11 +1,16 @@
-"use client"
-import { Typewriter } from 'react-simple-typewriter'
-import { useState, useEffect } from "react"
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
-import Image from "next/image"
-import Banner from '../app/images/imageBanner2.gif'
-import Image2 from '../app/images/image2.png'
-console.log(Image2.src)
+"use client";
+import { Typewriter } from "react-simple-typewriter";
+import { useState, useEffect } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
+import Image from "next/image";
+import Banner from "../app/images/imageBanner2.gif";
+import Image2 from "../app/images/image2.png";
+console.log(Image2.src);
 import {
   Github,
   Linkedin,
@@ -29,19 +34,19 @@ import {
   Heart,
   Coffee,
   Zap,
-} from "lucide-react"
+} from "lucide-react";
 
 export default function Portfolio() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const [portfolioFilter, setPortfolioFilter] = useState("all")
-  const [showScrollTop, setShowScrollTop] = useState(false)
-  const [nameAnimationComplete, setNameAnimationComplete] = useState(false)
-  const { scrollYProgress } = useScroll()
-  const name = "Rahul Yadav"
-  const [revert, setRevert] = useState(false)
-  const [counter, setCounter] = useState(0)
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [portfolioFilter, setPortfolioFilter] = useState("all");
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [nameAnimationComplete, setNameAnimationComplete] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const name = "Rahul Yadav";
+  const [revert, setRevert] = useState(false);
+  const [counter, setCounter] = useState(0);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   // Handle scroll to top button visibility
   // useEffect(()=>{
@@ -63,23 +68,21 @@ export default function Portfolio() {
   //          if(counter==0) setRevert(false)
   //       }
 
-
-
   //   } , 50)
 
   //   return ()=>clearTimeout(timer)
   // } , [counter , revert])
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const projects = [
     {
@@ -156,23 +159,25 @@ export default function Portfolio() {
     },
   ];
 
-
   const services = [
     {
       title: "Frontend Development",
-      description: "Creating responsive and interactive user interfaces using React.js and modern web technologies",
+      description:
+        "Creating responsive and interactive user interfaces using React.js and modern web technologies",
       icon: <Code className="w-8 h-8 md:w-12 md:h-12" />,
       delay: 0,
     },
     {
       title: "Backend Development",
-      description: "Building robust server-side applications with Node.js & PHP(Laravel)",
+      description:
+        "Building robust server-side applications with Node.js & PHP(Laravel)",
       icon: <Briefcase className="w-8 h-8 md:w-12 md:h-12" />,
       delay: 0.2,
     },
     {
       title: "Full Stack Solutions",
-      description: "End-to-end web application development with modern tech stack",
+      description:
+        "End-to-end web application development with modern tech stack",
       icon: <User className="w-8 h-8 md:w-12 md:h-12" />,
       delay: 0.4,
     },
@@ -182,7 +187,7 @@ export default function Portfolio() {
       icon: <GraduationCap className="w-8 h-8 md:w-12 md:h-12" />,
       delay: 0.6,
     },
-  ]
+  ];
 
   const learningPath = [
     {
@@ -210,22 +215,22 @@ export default function Portfolio() {
       delay: 0.6,
     },
     {
+      title: "MySQL",
+      description: "Relational database management with SQL mastery",
+      side: "left",
+      delay: 1.6,
+    },
+    {
       title: "PHP",
       description: "Backend scripting for server-side logic",
-      side: "left",
+      side: "right",
       delay: 0.8,
     },
     {
-      title: "Node.js",
-      description: "JavaScript runtime for scalable backend services",
-      side: "right",
-      delay: 1.0,
-    },
-    {
-      title: "Express.js",
-      description: "Minimal and flexible Node.js web framework",
+      title: "Laravel",
+      description: "Elegant PHP framework for modern web applications",
       side: "left",
-      delay: 1.2,
+      delay: 1.0,
     },
     {
       title: "MongoDB",
@@ -234,25 +239,32 @@ export default function Portfolio() {
       delay: 1.4,
     },
     {
-      title: "MySQL",
-      description: "Relational database management with SQL mastery",
+      title: "Node.js",
+      description: "JavaScript runtime for scalable backend services",
       side: "left",
-      delay: 1.6,
+      delay: 1.0,
+    },
+    {
+      title: "Express.js",
+      description: "Minimal and flexible Node.js web framework",
+      side: "right",
+      delay: 1.2,
     },
     {
       title: "C Programming",
-      description: "The foundation of system-level programming and logic building",
-      side: "right",
+      description:
+        "The foundation of system-level programming and logic building",
+      side: "left",
       delay: 1.8,
     },
     {
       title: "DSA",
-      description: "Data structures and algorithms for problem-solving excellence",
-      side: "left",
+      description:
+        "Data structures and algorithms for problem-solving excellence",
+      side: "right",
       delay: 2.0,
-    }
+    },
   ];
-
 
   const testimonials = [
     {
@@ -282,26 +294,54 @@ export default function Portfolio() {
       rating: 5,
       year: "2015",
     },
-  ]
+  ];
 
   const filteredProjects =
-    portfolioFilter === "all" ? projects : projects.filter((project) => project.category === portfolioFilter)
+    portfolioFilter === "all"
+      ? projects
+      : projects.filter((project) => project.category === portfolioFilter);
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-  }
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+    setCurrentTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [testimonials.length])
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
+  const handleSubmit = async (e:any) => {
+    e.preventDefault();
+
+    const formData = {
+      fullName: e.target.fullName.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+    };
+
+    const res = await fetch("/api/nodemailer", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    
+    if (res.ok) {
+      alert("Message sent successfully!");
+      e.target.reset();
+    } else {
+      alert("Failed to send message.");
+    }
+  };
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
       {/* Header */}
@@ -315,7 +355,15 @@ export default function Portfolio() {
             RY
           </motion.div>
           <div className="hidden lg:flex space-x-6 xl:space-x-8">
-            {["Home", "About", "Services", "Portfolio", "Projects", "Testimonials", "Contact"].map((item, index) => (
+            {[
+              "Home",
+              "About",
+              "Services",
+              "Portfolio",
+              "Projects",
+              "Testimonials",
+              "Contact",
+            ].map((item, index) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -334,8 +382,15 @@ export default function Portfolio() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            <motion.div animate={isMenuOpen ? { rotate: 180 } : { rotate: 0 }} transition={{ duration: 0.3 }}>
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <motion.div
+              animate={isMenuOpen ? { rotate: 180 } : { rotate: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </motion.div>
           </button>
         </nav>
@@ -378,7 +433,10 @@ export default function Portfolio() {
                     <div>
                       <div
                         className="relative overflow-hidden w-full"
-                        style={{ height: "2rem" /* adjust to your font-size/line-height */ }}
+                        style={{
+                          height:
+                            "2rem" /* adjust to your font-size/line-height */,
+                        }}
                       >
                         <motion.h3
                           className="absolute whitespace-nowrap font-bold 
@@ -390,7 +448,7 @@ export default function Portfolio() {
                             duration: 6,
                             ease: "linear",
                             repeat: Infinity,
-                            repeatType: "loop",   // go 100% → -100%, then snap back to 100% and repeat
+                            repeatType: "loop", // go 100% → -100%, then snap back to 100% and repeat
                           }}
                         >
                           Rahul Yadav
@@ -413,34 +471,44 @@ export default function Portfolio() {
                 {/* Navigation Links */}
                 <div className="flex-1 px-6 py-8 bg-gray-900">
                   <nav className="space-y-2">
-                    {["Home", "About", "Services", "Portfolio", "Projects", "Testimonials", "Contact"].map(
-                      (item, index) => (
-                        <motion.a
-                          key={item}
-                          href={`#${item.toLowerCase()}`}
-                          initial={{ opacity: 0, x: 50 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.1 * index, type: "spring", stiffness: 100 }}
-                          onClick={() => setIsMenuOpen(false)}
-                          className="flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-800/70 transition-all duration-300 group border border-transparent hover:border-gray-700"
+                    {[
+                      "Home",
+                      "About",
+                      "Services",
+                      "Portfolio",
+                      "Projects",
+                      "Testimonials",
+                      "Contact",
+                    ].map((item, index) => (
+                      <motion.a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                          delay: 0.1 * index,
+                          type: "spring",
+                          stiffness: 100,
+                        }}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-800/70 transition-all duration-300 group border border-transparent hover:border-gray-700"
+                      >
+                        <motion.div
+                          whileHover={{ scale: 1.2, rotate: 5 }}
+                          className="w-2 h-2 bg-blue-400 rounded-full group-hover:bg-blue-300 transition-colors"
+                        />
+                        <span className="body-md font-medium text-secondary group-hover:text-primary transition-colors">
+                          {item}
+                        </span>
+                        <motion.div
+                          initial={{ opacity: 0, x: -10 }}
+                          whileHover={{ opacity: 1, x: 0 }}
+                          className="ml-auto"
                         >
-                          <motion.div
-                            whileHover={{ scale: 1.2, rotate: 5 }}
-                            className="w-2 h-2 bg-blue-400 rounded-full group-hover:bg-blue-300 transition-colors"
-                          />
-                          <span className="body-md font-medium text-secondary group-hover:text-primary transition-colors">
-                            {item}
-                          </span>
-                          <motion.div
-                            initial={{ opacity: 0, x: -10 }}
-                            whileHover={{ opacity: 1, x: 0 }}
-                            className="ml-auto"
-                          >
-                            <ExternalLink className="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors" />
-                          </motion.div>
-                        </motion.a>
-                      ),
-                    )}
+                          <ExternalLink className="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors" />
+                        </motion.div>
+                      </motion.a>
+                    ))}
                   </nav>
                 </div>
 
@@ -454,43 +522,71 @@ export default function Portfolio() {
                   >
                     {/* Contact Info */}
                     <div className="space-y-3">
-                      <h4 className="heading-sm font-semibold text-primary mb-4">Get In Touch</h4>
+                      <h4 className="heading-sm font-semibold text-primary mb-4">
+                        Get In Touch
+                      </h4>
                       <div className="space-y-2">
                         <div className="flex items-center space-x-3 text-sm">
                           <div className="p-1.5 bg-blue-500/20 rounded-full">
                             <Mail className="w-3 h-3 text-blue-400" />
                           </div>
-                          <span className="text-secondary text-xs">raybalawas@gmail.com</span>
+                          <span className="text-secondary text-xs">
+                            raybalawas@gmail.com
+                          </span>
                         </div>
                         <div className="flex items-center space-x-3 text-sm">
                           <div className="p-1.5 bg-blue-500/20 rounded-full">
                             <Phone className="w-3 h-3 text-blue-400" />
                           </div>
-                          <span className="text-secondary text-xs">+91 8949540232</span>
+                          <span className="text-secondary text-xs">
+                            +91 8949540232
+                          </span>
                         </div>
                         <div className="flex items-center space-x-3 text-sm">
                           <div className="p-1.5 bg-blue-500/20 rounded-full">
                             <MapPin className="w-3 h-3 text-blue-400" />
                           </div>
-                          <span className="text-secondary text-xs">Jaipur, India</span>
+                          <span className="text-secondary text-xs">
+                            Jaipur, India
+                          </span>
                         </div>
                       </div>
                     </div>
 
                     {/* Social Links */}
                     <div className="space-y-3">
-                      <h4 className="heading-sm font-semibold text-primary mb-4">Connect</h4>
+                      <h4 className="heading-sm font-semibold text-primary mb-4">
+                        Connect
+                      </h4>
                       <div className="flex space-x-3">
                         {[
-                          { icon: Github, href: "https://github.com/raybalawas", label: "GitHub" },
-                          { icon: Mail, href: "mailto:raybalawas@gmail.com", label: "Email" },
-                          { icon: Linkedin, href: "https://www.linkedin.com/in/rahul-yadav-8b0158284/", label: "LinkedIn" },
+                          {
+                            icon: Github,
+                            href: "https://github.com/raybalawas",
+                            label: "GitHub",
+                          },
+                          {
+                            icon: Mail,
+                            href: "mailto:raybalawas@gmail.com",
+                            label: "Email",
+                          },
+                          {
+                            icon: Linkedin,
+                            href: "https://www.linkedin.com/in/rahul-yadav-8b0158284/",
+                            label: "LinkedIn",
+                          },
                         ].map(({ icon: Icon, href, label }) => (
                           <motion.a
                             key={label}
                             href={href}
-                            target={href.startsWith("http") ? "_blank" : undefined}
-                            rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                            target={
+                              href.startsWith("http") ? "_blank" : undefined
+                            }
+                            rel={
+                              href.startsWith("http")
+                                ? "noopener noreferrer"
+                                : undefined
+                            }
                             whileHover={{ scale: 1.2, y: -2 }}
                             whileTap={{ scale: 0.9 }}
                             className="p-2.5 bg-gray-700 rounded-full hover:bg-gray-600 transition-all duration-300 group border border-gray-600 hover:border-blue-500/50"
@@ -522,7 +618,10 @@ export default function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+      <section
+        id="home"
+        className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
+      >
         {/* Animated Background */}
         <div className="absolute inset-0 opacity-20">
           <motion.div
@@ -589,7 +688,6 @@ export default function Portfolio() {
                     deleteSpeed={100} // Same speed for deleting
                     delaySpeed={1000} // Pause before deleting (2 seconds)
                   />
-
                 </span>
               </motion.h1>
 
@@ -609,15 +707,31 @@ export default function Portfolio() {
                 className="flex justify-center lg:justify-start space-x-4 sm:space-x-6 mb-8"
               >
                 {[
-                  { icon: Github, href: "https://github.com/raybalawas", label: "GitHub" },
-                  { icon: Linkedin, href: "https://www.linkedin.com/in/rahul-yadav-8b0158284/", label: "LinkedIn" },
-                  { icon: Mail, href: "mailto:raybalawas@gmail.com", label: "Email" },
+                  {
+                    icon: Github,
+                    href: "https://github.com/raybalawas",
+                    label: "GitHub",
+                  },
+                  {
+                    icon: Linkedin,
+                    href: "https://www.linkedin.com/in/rahul-yadav-8b0158284/",
+                    label: "LinkedIn",
+                  },
+                  {
+                    icon: Mail,
+                    href: "mailto:raybalawas@gmail.com",
+                    label: "Email",
+                  },
                 ].map(({ icon: Icon, href, label }) => (
                   <motion.a
                     key={label}
                     href={href}
                     target={href.startsWith("http") ? "_blank" : undefined}
-                    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    rel={
+                      href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
                     className="p-2 sm:p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-all duration-300 group"
@@ -662,7 +776,6 @@ export default function Portfolio() {
               </motion.div>
             </div>
 
-
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -672,7 +785,11 @@ export default function Portfolio() {
               <div className="relative">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 50, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                  transition={{
+                    duration: 50,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "linear",
+                  }}
                   className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-20"
                 />
                 <motion.img
@@ -730,7 +847,9 @@ export default function Portfolio() {
                 >
                   <div className="text-center">
                     <User className="w-12 h-12 text-blue-400 mx-auto mb-3" />
-                    <p className="text-white font-semibold">Backend Developer</p>
+                    <p className="text-white font-semibold">
+                      Backend Developer
+                    </p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -771,13 +890,30 @@ export default function Portfolio() {
                 viewport={{ once: true }}
                 className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-6"
               >
-                {["PHP", "Laravel", "Node.js", "Express.js", "MySql", "MongoDB", "Java Script", "C-Language", "DSA", "HTML", "CSS", "Jquery", "Ajax", "&More"].map((skill) => (
+                {[
+                  "PHP",
+                  "Laravel",
+                  "Node.js",
+                  "Express.js",
+                  "MySql",
+                  "MongoDB",
+                  "Java Script",
+                  "C-Language",
+                  "DSA",
+                  "HTML",
+                  "CSS",
+                  "Jquery",
+                  "Ajax",
+                  "&More",
+                ].map((skill) => (
                   <motion.div
                     key={skill}
                     whileHover={{ scale: 1.05, y: -2 }}
                     className="bg-gray-700/50 p-2 rounded-lg text-center border border-gray-600 hover:border-blue-500 transition-all duration-300"
                   >
-                    <span className="text-blue-400 font-semibold text-sm sm:text-base">{skill}</span>
+                    <span className="text-blue-400 font-semibold text-sm sm:text-base">
+                      {skill}
+                    </span>
                   </motion.div>
                 ))}
               </motion.div>
@@ -785,7 +921,6 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
 
       {/* Services Section */}
       <section id="services" className="py-16 sm:py-20">
@@ -817,8 +952,13 @@ export default function Portfolio() {
                 >
                   {service.icon}
                 </motion.div>
-                <h3 className="heading-sm font-semibold text-primary mb-4">{service.title}</h3>
-                <p className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
+                <h3 className="heading-sm font-semibold text-primary mb-4">
+                  {service.title}
+                </h3>
+                <p
+                  className="text-secondary leading-relaxed"
+                  style={{ fontSize: "16px", lineHeight: "1.7" }}
+                >
                   {service.description}
                 </p>
                 <motion.div
@@ -860,7 +1000,9 @@ export default function Portfolio() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: item.delay }}
                   viewport={{ once: true }}
-                  className={`flex items-center ${item.side === "left" ? "justify-start" : "justify-end"} relative`}
+                  className={`flex items-center ${
+                    item.side === "left" ? "justify-start" : "justify-end"
+                  } relative`}
                 >
                   {/* Timeline Dot */}
                   <motion.div
@@ -874,8 +1016,11 @@ export default function Portfolio() {
                   {/* Content Card */}
                   <motion.div
                     whileHover={{ scale: 1.05, y: -5 }}
-                    className={`w-full sm:w-80 bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 ${item.side === "left" ? "mr-auto sm:mr-8 text-left" : "ml-auto sm:ml-8 text-right"
-                      }`}
+                    className={`w-full sm:w-80 bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 ${
+                      item.side === "left"
+                        ? "mr-auto sm:mr-8 text-left"
+                        : "ml-auto sm:ml-8 text-right"
+                    }`}
                   >
                     <motion.h3
                       initial={{ opacity: 0 }}
@@ -903,8 +1048,9 @@ export default function Portfolio() {
                       whileInView={{ width: "100%" }}
                       transition={{ duration: 1, delay: item.delay + 0.9 }}
                       viewport={{ once: true }}
-                      className={`h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-4 ${item.side === "right" ? "ml-auto" : ""
-                        }`}
+                      className={`h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-4 ${
+                        item.side === "right" ? "ml-auto" : ""
+                      }`}
                     />
                   </motion.div>
                 </motion.div>
@@ -938,163 +1084,195 @@ export default function Portfolio() {
 
       {/* Skills Section */}
       <section className="py-16 sm:py-20 bg-gray-800/50">
-  <div className="container mx-auto px-4 sm:px-6">
-    <motion.h2
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="heading-lg font-bold mb-16 text-center text-primary font-poppins"
-    >
-      Skills
-    </motion.h2>
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="heading-lg font-bold mb-16 text-center text-primary font-poppins"
+          >
+            Skills
+          </motion.h2>
 
-    <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
-
-      {/* MERN Stack */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="heading-sm font-semibold text-primary mb-6">MERN Stack</h3>
-        <div className="space-y-4 sm:space-y-6">
-          {([
-            { name: "HTML", level: 95, icon: "🌐" },
-            { name: "CSS", level: 90, icon: "🎨" },
-            { name: "Bootstrap", level: 85, icon: "📱" },
-            { name: "PHP", level: 80, icon: "🐘" },
-            { name: "Laravel", level: 85, icon: "🛠️" },
-            { name: "MySQL", level: 90, icon: "📊" },
-            { name: "JavaScript", level: 93, icon: "⚡" },
-            { name: "Jquery", level: 85, icon: "📜" },
-            { name: "Ajax", level: 80, icon: "🔄" },
-            { name: "Node.js", level: 91, icon: "🟢" },
-            { name: "Express.js", level: 90, icon: "🚀" },
-            { name: "MongoDB", level: 85, icon: "🍃" },
-            { name: "C-Language", level: 80, icon: "🖥️" },
-            { name: "DSA", level: 75, icon: "📚" },
-          ] as { name: string; level: number; icon: string }[]).map((skill, index) => (
+          <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
+            {/* MERN Stack */}
             <motion.div
-              key={skill.name}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="flex items-center space-x-3 sm:space-x-4"
             >
-              <span className="text-lg sm:text-2xl">{skill.icon}</span>
-              <div className="flex-1">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="body-md font-medium text-primary">{skill.name}</span>
-                  <span className="caption text-accent font-semibold">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
+              <h3 className="heading-sm font-semibold text-primary mb-6">
+                MERN Stack
+              </h3>
+              <div className="space-y-4 sm:space-y-6">
+                {(
+                  [
+                    { name: "HTML", level: 95, icon: "🌐" },
+                    { name: "CSS", level: 90, icon: "🎨" },
+                    { name: "Bootstrap", level: 85, icon: "📱" },
+                    { name: "PHP", level: 80, icon: "🐘" },
+                    { name: "Laravel", level: 85, icon: "🛠️" },
+                    { name: "MySQL", level: 90, icon: "📊" },
+                    { name: "JavaScript", level: 93, icon: "⚡" },
+                    { name: "Jquery", level: 85, icon: "📜" },
+                    { name: "Ajax", level: 80, icon: "🔄" },
+                    { name: "Node.js", level: 91, icon: "🟢" },
+                    { name: "Express.js", level: 90, icon: "🚀" },
+                    { name: "MongoDB", level: 85, icon: "🍃" },
+                    { name: "C-Language", level: 80, icon: "🖥️" },
+                    { name: "DSA", level: 75, icon: "📚" },
+                  ] as { name: string; level: number; icon: string }[]
+                ).map((skill, index) => (
                   <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
+                    key={skill.name}
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
+                    className="flex items-center space-x-3 sm:space-x-4"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
+                    <span className="text-lg sm:text-2xl">{skill.icon}</span>
+                    <div className="flex-1">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="body-md font-medium text-primary">
+                          {skill.name}
+                        </span>
+                        <span className="caption text-accent font-semibold">
+                          {skill.level}%
+                        </span>
+                      </div>
+                      <div className="w-full bg-gray-700 rounded-full h-2">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          transition={{
+                            duration: 1.5,
+                            delay: index * 0.1,
+                            ease: "easeOut",
+                          }}
+                          viewport={{ once: true }}
+                          className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
+                        </motion.div>
+                      </div>
+                    </div>
                   </motion.div>
-                </div>
+                ))}
               </div>
             </motion.div>
-          ))}
-        </div>
-      </motion.div>
 
-      {/* MS-Office */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="heading-sm font-semibold text-primary mb-6">MS-Office</h3>
-        <div className="space-y-4 sm:space-y-6">
-          {([
-            { name: "MS-Word", level: 90, icon: "📄" },
-            { name: "MS-Excel", level: 85, icon: "📊" },
-            { name: "MS-PowerPoint", level: 88, icon: "📈" },
-          ] as { name: string; level: number; icon: string }[]).map((skill, index) => (
+            {/* MS-Office */}
             <motion.div
-              key={skill.name}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="flex items-center space-x-3 sm:space-x-4"
             >
-              <span className="text-lg sm:text-2xl">{skill.icon}</span>
-              <div className="flex-1">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="body-md font-medium text-primary">{skill.name}</span>
-                  <span className="caption text-accent font-semibold">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
+              <h3 className="heading-sm font-semibold text-primary mb-6">
+                MS-Office
+              </h3>
+              <div className="space-y-4 sm:space-y-6">
+                {(
+                  [
+                    { name: "MS-Word", level: 90, icon: "📄" },
+                    { name: "MS-Excel", level: 85, icon: "📊" },
+                    { name: "MS-PowerPoint", level: 88, icon: "📈" },
+                  ] as { name: string; level: number; icon: string }[]
+                ).map((skill, index) => (
                   <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
+                    key={skill.name}
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
+                    className="flex items-center space-x-3 sm:space-x-4"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
+                    <span className="text-lg sm:text-2xl">{skill.icon}</span>
+                    <div className="flex-1">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="body-md font-medium text-primary">
+                          {skill.name}
+                        </span>
+                        <span className="caption text-accent font-semibold">
+                          {skill.level}%
+                        </span>
+                      </div>
+                      <div className="w-full bg-gray-700 rounded-full h-2">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          transition={{
+                            duration: 1.5,
+                            delay: index * 0.1,
+                            ease: "easeOut",
+                          }}
+                          viewport={{ once: true }}
+                          className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
+                        </motion.div>
+                      </div>
+                    </div>
                   </motion.div>
-                </div>
+                ))}
               </div>
             </motion.div>
-          ))}
-        </div>
-      </motion.div>
 
-      {/* Others */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        viewport={{ once: true }}
-      >
-        <div className="space-y-4 sm:space-y-6">
-          {([] as { name: string; level: number; icon: string }[]).map((skill, index) => (
+            {/* Others */}
             <motion.div
-              key={skill.name}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="flex items-center space-x-3 sm:space-x-4"
             >
-              <span className="text-lg sm:text-2xl">{skill.icon}</span>
-              <div className="flex-1">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="body-md font-medium text-primary">{skill.name}</span>
-                  <span className="caption text-accent font-semibold">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                    className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
-                  </motion.div>
-                </div>
+              <div className="space-y-4 sm:space-y-6">
+                {([] as { name: string; level: number; icon: string }[]).map(
+                  (skill, index) => (
+                    <motion.div
+                      key={skill.name}
+                      initial={{ opacity: 0, x: -50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="flex items-center space-x-3 sm:space-x-4"
+                    >
+                      <span className="text-lg sm:text-2xl">{skill.icon}</span>
+                      <div className="flex-1">
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="body-md font-medium text-primary">
+                            {skill.name}
+                          </span>
+                          <span className="caption text-accent font-semibold">
+                            {skill.level}%
+                          </span>
+                        </div>
+                        <div className="w-full bg-gray-700 rounded-full h-2">
+                          <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: `${skill.level}%` }}
+                            transition={{
+                              duration: 1.5,
+                              delay: index * 0.1,
+                              ease: "easeOut",
+                            }}
+                            viewport={{ once: true }}
+                            className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full relative"
+                          >
+                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse opacity-75"></div>
+                          </motion.div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )
+                )}
               </div>
             </motion.div>
-          ))}
+          </div>
         </div>
-      </motion.div>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Portfolio/Experience Section */}
       <section id="portfolio" className="py-16 sm:py-20">
@@ -1129,17 +1307,31 @@ export default function Portfolio() {
                   <Briefcase className="w-8 h-8 sm:w-12 sm:h-12" />
                 </motion.div>
                 <div>
-                  <h3 className="heading-sm font-semibold text-primary mb-4">Experience</h3>
-                  <p className="text-blue-400 text-base sm:text-lg"> Backend Developer</p>
+                  <h3 className="heading-sm font-semibold text-primary mb-4">
+                    Experience
+                  </h3>
+                  <p className="text-blue-400 text-base sm:text-lg">
+                    {" "}
+                    Backend Developer
+                  </p>
                 </div>
               </div>
               <div className="space-y-4 mb-6 sm:mb-8">
-                <p className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
-                  I worked as an Backend Developer in Programmates software pvt. ltd for 1.6 Years to build many application using Laravel, PHP.
+                <p
+                  className="text-secondary leading-relaxed"
+                  style={{ fontSize: "16px", lineHeight: "1.7" }}
+                >
+                  I worked as an Backend Developer in Programmates software pvt.
+                  ltd for 1.6 Years to build many application using Laravel,
+                  PHP.
                 </p>
-                <p className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
-                  During this Job, I gained valuable experience in developing user-friendly webApps, managing
-                  Admin Panel, and integrating APIs to fetch and handle accourding to the  need of The Users.
+                <p
+                  className="text-secondary leading-relaxed"
+                  style={{ fontSize: "16px", lineHeight: "1.7" }}
+                >
+                  During this Job, I gained valuable experience in developing
+                  user-friendly webApps, managing Admin Panel, and integrating
+                  APIs to fetch and handle accourding to the need of The Users.
                 </p>
               </div>
               {/* <motion.a
@@ -1172,16 +1364,32 @@ export default function Portfolio() {
                   <Briefcase className="w-8 h-8 sm:w-12 sm:h-12" />
                 </motion.div>
                 <div>
-                  <h3 className="heading-sm font-semibold text-primary mb-4">Job Experience</h3>
-                  <p className="text-blue-400 text-base sm:text-lg">Currently Bankend developer</p>
+                  <h3 className="heading-sm font-semibold text-primary mb-4">
+                    Job Experience
+                  </h3>
+                  <p className="text-blue-400 text-base sm:text-lg">
+                    Currently Bankend developer
+                  </p>
                 </div>
               </div>
               <div className="space-y-4 mb-6 sm:mb-8">
-                <p className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
-                  currently I am working in NBT as a Backend Developer in Node js/ PHP(Laravel).
+                <p
+                  className="text-secondary leading-relaxed"
+                  style={{ fontSize: "16px", lineHeight: "1.7" }}
+                >
+                  currently I am working in NBT as a Backend Developer in Node
+                  js/ PHP(Laravel).
                 </p>
-                <p className="text-secondary leading-relaxed" style={{ fontSize: '16px', lineHeight: '1.7' }}>
-                  My role involves developing scalable APIs, managing databases, and ensuring smooth backend operations for various web applications. Alongside my job, I am consistently upskilling by learning advanced backend concepts, system architecture, and contributing to full-stack projects to enhance my expertise.
+                <p
+                  className="text-secondary leading-relaxed"
+                  style={{ fontSize: "16px", lineHeight: "1.7" }}
+                >
+                  My role involves developing scalable APIs, managing databases,
+                  and ensuring smooth backend operations for various web
+                  applications. Alongside my job, I am consistently upskilling
+                  by learning advanced backend concepts, system architecture,
+                  and contributing to full-stack projects to enhance my
+                  expertise.
                 </p>
               </div>
               {/* <motion.a
@@ -1219,14 +1427,19 @@ export default function Portfolio() {
             className="flex justify-center mb-8 sm:mb-12"
           >
             <div className="flex flex-wrap justify-center gap-2 sm:gap-4 bg-gray-800 p-2 rounded-full">
-              {[/*"all", "web", "fullstack"*/].map((filter) => (
+              {[
+                /*"all", "web", "fullstack"*/
+              ].map((filter) => (
                 <motion.button
                   key={filter}
                   onClick={() => setPortfolioFilter(filter)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`px-4 sm:px-6 py-2 rounded-full transition-all duration-300 text-sm sm:text-base ${portfolioFilter === filter ? "bg-blue-500 text-white" : "text-gray-400 hover:text-white"
-                    } body-md font-semibold`}
+                  className={`px-4 sm:px-6 py-2 rounded-full transition-all duration-300 text-sm sm:text-base ${
+                    portfolioFilter === filter
+                      ? "bg-blue-500 text-white"
+                      : "text-gray-400 hover:text-white"
+                  } body-md font-semibold`}
                 >
                   {/*filter.charAt(0).toUpperCase() + filter.slice(1)*/}
                 </motion.button>
@@ -1262,8 +1475,13 @@ export default function Portfolio() {
                     </motion.div>
                   </div>
                   <div className="p-4 sm:p-6">
-                    <h3 className="heading-sm font-semibold text-primary mb-4">{project.title}</h3>
-                    <p className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
+                    <h3 className="heading-sm font-semibold text-primary mb-4">
+                      {project.title}
+                    </h3>
+                    <p
+                      className="text-secondary leading-relaxed"
+                      style={{ fontSize: "16px", lineHeight: "1.7" }}
+                    >
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
@@ -1283,7 +1501,8 @@ export default function Portfolio() {
                       whileHover={{ scale: 1.05 }}
                       className="flex items-center text-blue-400 hover:text-blue-300 transition-colors font-semibold text-sm sm:text-base"
                     >
-                      View Project <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
+                      View Project{" "}
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
                     </motion.a>
                   </div>
                 </motion.div>
@@ -1326,14 +1545,18 @@ export default function Portfolio() {
                       <GraduationCap className="w-8 h-8 sm:w-12 sm:h-12" />
                     </motion.div>
                     <div>
-                      <h3 className="heading-sm font-semibold text-primary">{testimonials[currentTestimonial].name}</h3>
+                      <h3 className="heading-sm font-semibold text-primary">
+                        {testimonials[currentTestimonial].name}
+                      </h3>
                       <p className="text-blue-400 text-base sm:text-lg font-semibold">
                         {testimonials[currentTestimonial].role}
                       </p>
                       <p className="body-md text-secondary leading-relaxed">
                         {testimonials[currentTestimonial].company}
                       </p>
-                      <p className="text-xs sm:text-sm text-gray-500 mt-1">{testimonials[currentTestimonial].year}</p>
+                      <p className="text-xs sm:text-sm text-gray-500 mt-1">
+                        {testimonials[currentTestimonial].year}
+                      </p>
                     </div>
                   </div>
                   <motion.p
@@ -1347,16 +1570,18 @@ export default function Portfolio() {
                   </motion.p>
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="flex space-x-1">
-                      {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ opacity: 0, scale: 0 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: i * 0.1 }}
-                        >
-                          <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
-                        </motion.div>
-                      ))}
+                      {[...Array(testimonials[currentTestimonial].rating)].map(
+                        (_, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: i * 0.1 }}
+                          >
+                            <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
+                          </motion.div>
+                        )
+                      )}
                     </div>
                     <div className="flex space-x-4">
                       <motion.button
@@ -1388,8 +1613,11 @@ export default function Portfolio() {
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   whileHover={{ scale: 1.2 }}
-                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${index === currentTestimonial ? "bg-blue-500 w-6 sm:w-8" : "bg-gray-600 hover:bg-gray-500"
-                    }`}
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                    index === currentTestimonial
+                      ? "bg-blue-500 w-6 sm:w-8"
+                      : "bg-gray-600 hover:bg-gray-500"
+                  }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
@@ -1444,7 +1672,9 @@ export default function Portfolio() {
               >
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
-                  <span className="text-white text-xs sm:text-sm">Jaipur, India</span>
+                  <span className="text-white text-xs sm:text-sm">
+                    Jaipur, India
+                  </span>
                 </div>
               </motion.div>
             </motion.div>
@@ -1457,9 +1687,12 @@ export default function Portfolio() {
               viewport={{ once: true }}
               className="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-2xl border border-gray-700 order-1 lg:order-2"
             >
-              <form className="space-y-4 sm:space-y-6">
+              <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
                 <div>
-                  <label htmlFor="fullName" className="caption font-medium text-secondary mb-3">
+                  <label
+                    htmlFor="fullName"
+                    className="caption font-medium text-secondary mb-3"
+                  >
                     Full Name
                   </label>
                   <motion.input
@@ -1474,7 +1707,10 @@ export default function Portfolio() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="caption font-medium text-secondary mb-3">
+                  <label
+                    htmlFor="email"
+                    className="caption font-medium text-secondary mb-3"
+                  >
                     Email
                   </label>
                   <motion.input
@@ -1489,7 +1725,10 @@ export default function Portfolio() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="caption font-medium text-secondary mb-3">
+                  <label
+                    htmlFor="message"
+                    className="caption font-medium text-secondary mb-3"
+                  >
                     Message
                   </label>
                   <motion.textarea
@@ -1512,7 +1751,10 @@ export default function Portfolio() {
                   <span>Submit</span>
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Number.POSITIVE_INFINITY,
+                    }}
                   >
                     <Send className="w-4 h-4 sm:w-5 sm:h-5" />
                   </motion.div>
@@ -1530,19 +1772,28 @@ export default function Portfolio() {
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center space-x-3">
                     <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 flex-shrink-0" />
-                    <span className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
+                    <span
+                      className="text-secondary leading-relaxed"
+                      style={{ fontSize: "16px", lineHeight: "1.7" }}
+                    >
                       raybalawas@gmail.com
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 flex-shrink-0" />
-                    <span className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
+                    <span
+                      className="text-secondary leading-relaxed"
+                      style={{ fontSize: "16px", lineHeight: "1.7" }}
+                    >
                       +91 8949540232
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 flex-shrink-0" />
-                    <span className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
+                    <span
+                      className="text-secondary leading-relaxed"
+                      style={{ fontSize: "16px", lineHeight: "1.7" }}
+                    >
                       Jaipur, India
                     </span>
                   </div>
@@ -1560,12 +1811,20 @@ export default function Portfolio() {
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 to-purple-500/10" />
           <motion.div
             animate={{ rotate: 360 }}
-            transition={{ duration: 60, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+            transition={{
+              duration: 60,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "linear",
+            }}
             className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"
           />
           <motion.div
             animate={{ rotate: -360 }}
-            transition={{ duration: 80, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+            transition={{
+              duration: 80,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "linear",
+            }}
             className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"
           />
         </div>
@@ -1584,29 +1843,48 @@ export default function Portfolio() {
                   <span className="text-white font-bold text-xl">RY</span>
                 </div>
                 <div>
-                  <motion.h3 whileHover={{ scale: 1.05 }} className="heading-sm font-semibold text-primary mb-4">
+                  <motion.h3
+                    whileHover={{ scale: 1.05 }}
+                    className="heading-sm font-semibold text-primary mb-4"
+                  >
                     Rahul Yadav
                   </motion.h3>
-                  <p className="body-sm text-secondary leading-relaxed">Full Stack Developer | Backend Specialist</p>
+                  <p className="body-sm text-secondary leading-relaxed">
+                    Full Stack Developer | Backend Specialist
+                  </p>
                 </div>
               </div>
 
-              <p className="text-secondary leading-relaxed" style={{ fontSize: "16px", lineHeight: "1.7" }}>
-                Passionate about creating innovative web solutions and bringing ideas to life through clean, efficient
-                code. Always learning and exploring new technologies to deliver exceptional user experiences.
+              <p
+                className="text-secondary leading-relaxed"
+                style={{ fontSize: "16px", lineHeight: "1.7" }}
+              >
+                Passionate about creating innovative web solutions and bringing
+                ideas to life through clean, efficient code. Always learning and
+                exploring new technologies to deliver exceptional user
+                experiences.
               </p>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 py-6 border-y border-gray-800">
-                <motion.div whileHover={{ scale: 1.05 }} className="text-center">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="text-center"
+                >
                   <div className="text-2xl font-bold text-blue-400">15+</div>
                   <div className="text-xs text-gray-400">Projects</div>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} className="text-center">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="text-center"
+                >
                   <div className="text-2xl font-bold text-purple-400">3+</div>
                   <div className="text-xs text-gray-400">Months Exp</div>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} className="text-center">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="text-center"
+                >
                   <div className="text-2xl font-bold text-cyan-400">24/7</div>
                   <div className="text-xs text-gray-400">Available</div>
                 </motion.div>
@@ -1621,14 +1899,28 @@ export default function Portfolio() {
                     label: "GitHub",
                     color: "hover:bg-gray-700",
                   },
-                  { icon: Mail, href: "mailto:raybalawas@gmail.com", label: "Email", color: "hover:bg-red-600" },
-                  { icon: Linkedin, href: "https://www.linkedin.com/in/rahul-yadav-8b0158284/", label: "LinkedIn", color: "hover:bg-blue-600" },
+                  {
+                    icon: Mail,
+                    href: "mailto:raybalawas@gmail.com",
+                    label: "Email",
+                    color: "hover:bg-red-600",
+                  },
+                  {
+                    icon: Linkedin,
+                    href: "https://www.linkedin.com/in/rahul-yadav-8b0158284/",
+                    label: "LinkedIn",
+                    color: "hover:bg-blue-600",
+                  },
                 ].map(({ icon: Icon, href, label, color }) => (
                   <motion.a
                     key={label}
                     href={href}
                     target={href.startsWith("http") ? "_blank" : undefined}
-                    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    rel={
+                      href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     whileHover={{ scale: 1.2, y: -2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
                     className={`p-3 bg-gray-800 rounded-full ${color} transition-all duration-300 group border border-gray-700 hover:border-blue-500/50`}
@@ -1653,7 +1945,14 @@ export default function Portfolio() {
                 Quick Links
               </h4>
               <ul className="space-y-3">
-                {["Home", "About", "Services", "Portfolio", "Projects", "Contact"].map((link) => (
+                {[
+                  "Home",
+                  "About",
+                  "Services",
+                  "Portfolio",
+                  "Projects",
+                  "Contact",
+                ].map((link) => (
                   <li key={link}>
                     <motion.a
                       href={`#${link.toLowerCase()}`}
@@ -1720,8 +2019,12 @@ export default function Portfolio() {
                   <Mail className="w-5 h-5 text-blue-400" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase tracking-wide">Email</p>
-                  <p className="body-sm text-secondary leading-relaxed">raybalawas@gmail.com</p>
+                  <p className="text-xs text-gray-400 uppercase tracking-wide">
+                    Email
+                  </p>
+                  <p className="body-sm text-secondary leading-relaxed">
+                    raybalawas@gmail.com
+                  </p>
                 </div>
               </motion.div>
               <motion.div
@@ -1732,8 +2035,12 @@ export default function Portfolio() {
                   <Phone className="w-5 h-5 text-green-400" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase tracking-wide">Phone</p>
-                  <p className="body-sm text-secondary leading-relaxed">+91 8949540232</p>
+                  <p className="text-xs text-gray-400 uppercase tracking-wide">
+                    Phone
+                  </p>
+                  <p className="body-sm text-secondary leading-relaxed">
+                    +91 8949540232
+                  </p>
                 </div>
               </motion.div>
               <motion.div
@@ -1744,8 +2051,12 @@ export default function Portfolio() {
                   <MapPin className="w-5 h-5 text-purple-400" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase tracking-wide">Location</p>
-                  <p className="body-sm text-secondary leading-relaxed">Jaipur, India</p>
+                  <p className="text-xs text-gray-400 uppercase tracking-wide">
+                    Location
+                  </p>
+                  <p className="body-sm text-secondary leading-relaxed">
+                    Jaipur, India
+                  </p>
                 </div>
               </motion.div>
             </div>
@@ -1762,11 +2073,14 @@ export default function Portfolio() {
             <div className="text-center space-y-4">
               <div className="flex items-center justify-center space-x-2">
                 <Heart className="w-6 h-6 text-red-400" />
-                <h4 className="heading-sm font-semibold text-primary mb-4">Stay Connected</h4>
+                <h4 className="heading-sm font-semibold text-primary mb-4">
+                  Stay Connected
+                </h4>
                 <Heart className="w-6 h-6 text-red-400" />
               </div>
               <p className="text-gray-300 max-w-md mx-auto">
-                Get updates about my latest projects and tech insights. Let's build something amazing together!
+                Get updates about my latest projects and tech insights. Let's
+                build something amazing together!
               </p>
               <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                 <input
@@ -1848,5 +2162,5 @@ export default function Portfolio() {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }
