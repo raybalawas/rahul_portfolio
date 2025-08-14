@@ -339,7 +339,7 @@ export default function Portfolio() {
       alert("Message sent successfully!");
       e.target.reset();
     } else {
-      alert("Failed to send message.");
+      alert("Server Error Message can't send!");
     }
   };
   return (
