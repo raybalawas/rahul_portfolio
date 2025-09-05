@@ -157,6 +157,33 @@ export default function Portfolio() {
       image: "/crm.png",
       category: "enterprise",
     },
+    {
+      title: "WhatsApp Bulk Messaging Bot",
+      description:
+        "A Node.js + Puppeteer based system to send bulk WhatsApp messages with CSV import, campaign management, and media attachments. Supports real-time status tracking and Cloudinary integration.",
+      link: "#", // replace with GitHub repo or live demo
+      tech: ["Node.js", "Express", "MongoDB", "Puppeteer", "Cloudinary"],
+      image: "/whatsappbulk.png",
+      category: "messaging",
+    },
+    {
+      title: "OTP Authentication API",
+      description:
+        "A secure API for OTP generation and verification via SMS/WhatsApp, built for authentication flows. Supports token-based validation and customizable expiry times.",
+      link: "#", // replace with GitHub repo or live demo
+      tech: ["Node.js", "Express", "MongoDB", "JWT", "Twilio/WhatsApp API"],
+      image: "/otpapi.jpg",
+      category: "security",
+    },
+    {
+      title: "Zerfinis – Company Portfolio Website",
+      description:
+        "A modern responsive portfolio website for Zerfinis Pvt Ltd showcasing services like web development, mobile apps, and enterprise solutions with a clean UI/UX.",
+      link: "#", // replace with actual company site link if hosted
+      tech: ["React", "Vite", "TailwindCSS", "React Router"],
+      image: "/zerfinis.png",
+      category: "web",
+    },
   ];
 
   const services = [
