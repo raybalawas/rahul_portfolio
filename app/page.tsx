@@ -188,31 +188,38 @@ export default function Portfolio() {
 
   const services = [
     {
+      title: "Data Scraping & Automation",
+      description:
+        "Extracting structured data from websites at scale using Node.js, Puppeteer, and Cheerio. Capable of handling dynamic content, bypassing anti-bot measures, and automating repetitive workflows for market research, e-commerce, and analytics.",
+      icon: <GraduationCap className="w-8 h-8 md:w-12 md:h-12" />,
+      delay: 0,
+    },
+    {
       title: "Frontend Development",
       description:
         "Creating responsive and interactive user interfaces using React.js and modern web technologies",
       icon: <Code className="w-8 h-8 md:w-12 md:h-12" />,
-      delay: 0,
+      delay: 0.2,
     },
     {
       title: "Backend Development",
       description:
         "Building robust server-side applications with Node.js & PHP(Laravel)",
       icon: <Briefcase className="w-8 h-8 md:w-12 md:h-12" />,
-      delay: 0.2,
+      delay: 0.4,
     },
     {
       title: "Full Stack Solutions",
       description:
         "End-to-end web application development with modern tech stack",
       icon: <User className="w-8 h-8 md:w-12 md:h-12" />,
-      delay: 0.4,
+      delay: 0.6,
     },
     {
       title: "Database Management",
       description: "Designing and managing databases with MongoDB and MySQL",
       icon: <GraduationCap className="w-8 h-8 md:w-12 md:h-12" />,
-      delay: 0.6,
+      delay: 0.8,
     },
   ];
 
@@ -245,19 +252,19 @@ export default function Portfolio() {
       title: "MySQL",
       description: "Relational database management with SQL mastery",
       side: "left",
-      delay: 1.6,
+      delay: 0.8,
     },
     {
       title: "PHP",
       description: "Backend scripting for server-side logic",
       side: "right",
-      delay: 0.8,
+      delay: 1.0,
     },
     {
       title: "Laravel",
       description: "Elegant PHP framework for modern web applications",
       side: "left",
-      delay: 1.0,
+      delay: 1.2,
     },
     {
       title: "MongoDB",
@@ -269,27 +276,34 @@ export default function Portfolio() {
       title: "Node.js",
       description: "JavaScript runtime for scalable backend services",
       side: "left",
-      delay: 1.0,
+      delay: 1.6,
     },
     {
       title: "Express.js",
       description: "Minimal and flexible Node.js web framework",
       side: "right",
-      delay: 1.2,
+      delay: 1.8,
+    },
+    {
+      title: "Puppeteer",
+      description:
+        "Headless browser automation to extract structured data and perform web scraping at scale",
+      side: "left",
+      delay: 2.0,
     },
     {
       title: "C Programming",
       description:
         "The foundation of system-level programming and logic building",
-      side: "left",
-      delay: 1.8,
+      side: "right",
+      delay: 2.2,
     },
     {
       title: "DSA",
       description:
         "Data structures and algorithms for problem-solving excellence",
-      side: "right",
-      delay: 2.0,
+      side: "left",
+      delay: 2.4,
     },
   ];
 
@@ -345,7 +359,7 @@ export default function Portfolio() {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     const formData = {
@@ -361,7 +375,7 @@ export default function Portfolio() {
       },
       body: JSON.stringify(formData),
     });
-    
+
     if (res.ok) {
       alert("Message sent successfully!");
       e.target.reset();
@@ -1148,6 +1162,7 @@ export default function Portfolio() {
                     { name: "Node.js", level: 91, icon: "🟢" },
                     { name: "Express.js", level: 90, icon: "🚀" },
                     { name: "MongoDB", level: 85, icon: "🍃" },
+                    {name: "Puppeteer", level: 70, icon: "🤖"},
                     { name: "C-Language", level: 80, icon: "🖥️" },
                     { name: "DSA", level: 75, icon: "📚" },
                   ] as { name: string; level: number; icon: string }[]
