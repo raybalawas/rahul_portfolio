@@ -221,6 +221,13 @@ export default function Portfolio() {
       icon: <GraduationCap className="w-8 h-8 md:w-12 md:h-12" />,
       delay: 0.8,
     },
+    {
+      title: "Live Deployment & Hosting",
+      description:
+        "Deploying and hosting full-stack applications on Netlify, Vercel, Render, and VPS servers. Experienced in setting up CI/CD pipelines, environment variables, and domain configurations for production-ready apps.",
+      icon: <Code className="w-8 h-8 md:w-12 md:h-12" />,
+      delay: 1.0,
+    },
   ];
 
   const learningPath = [
